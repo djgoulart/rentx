@@ -4,15 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import {
   useFonts,
-  Inter_400Regular,
-  Inter_500Medium
-} from '@expo-google-fonts/inter';
-
-import {
-  Archivo_400Regular,
-  Archivo_500Medium,
-  Archivo_600SemiBold
-} from '@expo-google-fonts/archivo';
+} from 'expo-font';
 
 import theme from './src/styles/theme';
 import { Home } from './src/Screens/Home';
@@ -20,11 +12,11 @@ import { CarDetails } from './src/Screens/CarDetails';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Archivo_400Regular,
-    Archivo_500Medium,
-    Archivo_600SemiBold
+    'Inter_400Regular': require("./src/assets/fonts/Inter/ttf/Inter-Regular.ttf"),
+    'Inter_500Medium': require("./src/assets/fonts/Inter/ttf/Inter-Medium.ttf"),
+    'Archivo_400Regular': require("./src/assets/fonts/Archivo/ttf/Archivo-Regular.ttf"),
+    'Archivo_500Medium': require("./src/assets/fonts/Archivo/ttf/Archivo-Medium.ttf"),
+    'Archivo_600SemiBold': require("./src/assets/fonts/Archivo/ttf/Archivo-SemiBold.ttf")
   });
 
   if (!fontsLoaded) {
