@@ -1,4 +1,4 @@
-import { RFValue } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -8,13 +8,17 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   width: 100%;
-  height: 113px;
-  background-color: ${({ theme }) => theme.colors.shape};
+  background-color: ${({ theme }) => theme.colors.background_secondary};
 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-
+  position: absolute;
+  margin-top: ${getStatusBarHeight() + 18}px;
+  margin-left: 24px;
 `;
 
+export const CarImages = styled.View`
+  margin-top: ${getStatusBarHeight() + 32}px;
+`;
