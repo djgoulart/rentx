@@ -18,7 +18,7 @@ import theme from './src/styles/theme';
 import { Home } from './src/Screens/Home';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
+  let [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
     Archivo_400Regular,
